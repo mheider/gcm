@@ -7,6 +7,8 @@ class GCM
   base_uri 'https://gcm-http.googleapis.com/gcm'
   default_timeout 30
   format :json
+  # ignore ssl validation
+  default_options.update(verify: false)
 
   attr_accessor :timeout, :api_key
 
